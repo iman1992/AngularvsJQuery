@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html ng-app="MyApp" ng-controller="DefaultController">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="js/angular.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="col-md-5">
+            <div>Add Your Table made with Angular here</div>
+            <a href='index.html'>Back</a>
+            <table class="table table-responsive">
+                <thead>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Eye Color</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Friends</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="member in members">
+                        <td>{{member.id}}</td>
+                        <td>{{member.age}}</td>
+                        <td>{{member.eyeColor}}</td>
+                        <td>{{member.name}}</td>
+                        <td>{{member.email}}</td>
+                        <td><input type="submit" value="Friends" ng-click="showFriends(member.id)"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-responsive">
+                <thead>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Eye Color</th>
+                <th>Name</th>
+                <th>Email</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="friend in friends">
+                        <td>{{friend.id}}</td>
+                        <td>{{friend.age}}</td>
+                        <td>{{friend.eyeColor}}</td>
+                        <td>{{friend.name}}</td>
+                        <td>{{friend.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
